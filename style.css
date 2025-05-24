@@ -1,37 +1,9 @@
-:root {
-    --bg-primary: #E3F2FD;
-    --card-bg: rgba(255, 255, 255, 0.85);
-    --text-primary: rgba(0, 0, 0, 0.87);
-    --text-secondary: rgba(0, 0, 0, 0.6);
-    --accent-primary: #2196F3;
-    --accent-secondary: #1976D2;
-    --accent-dark: #0D47A1;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --border-color: rgba(255, 255, 255, 0.5);
-    --cursor-color: rgba(33, 150, 243, 0.5);
-    --star-color: rgba(33, 150, 243, 0.8);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    transition: background-color 0.3s ease,
-                background 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease,
-                color 0.3s ease;
-}
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow: hidden;
     height: 100vh;
-    background: var(--bg-primary);
-    color: var(--text-primary);
+    background: #E3F2FD;
+    color: rgba(0, 0, 0, 0.87);
     position: relative;
     cursor: none;
     transition: all 0.3s ease;
@@ -40,7 +12,7 @@ body {
 .cursor {
     width: 20px;
     height: 20px;
-    background: var(--cursor-color);
+    background: rgba(33, 150, 243, 0.5);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -57,7 +29,7 @@ body {
     width: 300px;
     height: 300px;
     background: radial-gradient(circle, 
-        var(--cursor-color) 0%,
+        rgba(33, 150, 243, 0.5) 0%,
         rgba(67, 160, 71, 0.05) 30%,
         transparent 70%
     );
@@ -75,19 +47,19 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(1.5px 1.5px at 10% 10%, var(--star-color) 100%, transparent),
-        radial-gradient(1.5px 1.5px at 20% 40%, var(--star-color) 100%, transparent),
-        radial-gradient(2.5px 2.5px at 30% 70%, var(--star-color) 100%, transparent),
-        radial-gradient(2.5px 2.5px at 40% 20%, var(--star-color) 100%, transparent),
-        radial-gradient(2.5px 2.5px at 50% 50%, var(--star-color) 100%, transparent),
-        radial-gradient(1.5px 1.5px at 60% 30%, var(--star-color) 100%, transparent),
-        radial-gradient(1.5px 1.5px at 70% 80%, var(--star-color) 100%, transparent),
-        radial-gradient(2.5px 2.5px at 80% 60%, var(--star-color) 100%, transparent),
-        radial-gradient(1.5px 1.5px at 90% 90%, var(--star-color) 100%, transparent);
+        radial-gradient(1.5px 1.5px at 10% 10%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 20% 40%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(2.5px 2.5px at 30% 70%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(2.5px 2.5px at 40% 20%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(2.5px 2.5px at 50% 50%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 60% 30%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 70% 80%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(2.5px 2.5px at 80% 60%, rgba(33, 150, 243, 0.8) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 90% 90%, rgba(33, 150, 243, 0.8) 100%, transparent);
     background-repeat: repeat;
     background-size: 300px 300px;
     opacity: 0.3;
-    filter: drop-shadow(0 0 1px var(--star-color));
+    filter: drop-shadow(0 0 1px rgba(33, 150, 243, 0.8));
     animation: twinkle 8s ease-in-out infinite alternate;
 }
 
@@ -98,17 +70,17 @@ body::after {
     width: 40vmin;
     height: 40vmin;
     background: radial-gradient(circle at 30% 30%, 
-        var(--accent-primary),
-        var(--accent-secondary) 30%,
-        var(--accent-dark) 70%
+        #2196F3,
+        #1976D2 30%,
+        #0D47A1 70%
     );
     border-radius: 50%;
     top: 65%;
     left: 75%;
     transform: translate(-50%, -50%);
     box-shadow: 
-        inset 5px -5px 25px var(--shadow-color),
-        inset -5px 5px 25px var(--shadow-color);
+        inset 5px -5px 25px rgba(0, 0, 0, 0.1),
+        inset -5px 5px 25px rgba(0, 0, 0, 0.1);
     opacity: 0.6;
     z-index: 0;
 }
@@ -136,7 +108,7 @@ body::after {
     position: fixed;
     width: 2px;
     height: 2px;
-    background: linear-gradient(45deg, var(--star-color));
+    background: linear-gradient(45deg, rgba(33, 150, 243, 0.8));
     border-radius: 50%;
     /* filter: blur(0.5px); */
     /* opacity: 1; */
@@ -181,26 +153,26 @@ body::after {
     width: 35vmin;
     height: 35vmin;
     background: radial-gradient(circle at 70% 70%, 
-        var(--accent-primary),
-        var(--accent-secondary) 40%,
-        var(--accent-dark) 80%
+        #2196F3,
+        #1976D2 40%,
+        #0D47A1 80%
     );
     border-radius: 50%;
     top: 25%;
     left: 28%;
     transform: translate(-50%, -50%);
     box-shadow: 
-        inset -5px 5px 25px var(--shadow-color),
-        inset 5px -5px 25px var(--shadow-color);
+        inset -5px 5px 25px rgba(0, 0, 0, 0.1),
+        inset 5px -5px 25px rgba(0, 0, 0, 0.1);
     opacity: 0.4;
     z-index: 0;
 }
 
 .intro-card {
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
     opacity: 96%;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 50px 40px;
     max-width: 680px;
@@ -208,7 +180,7 @@ body::after {
     text-align: center;
     box-shadow: 
         0 10px 20px -5px rgba(0, 0, 0, 0.15),
-        0 0 15px var(--shadow-color);
+        0 0 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -218,11 +190,11 @@ body::after {
     height: 200px;
     border-radius: 50%;
     margin: 0 auto 25px;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--border-color);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -265,7 +237,7 @@ body::after {
 .name {
     font-size: 28px;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-dark));
+    background: linear-gradient(135deg, #2196F3, #1976D2, #0D47A1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -276,13 +248,13 @@ body::after {
 }
 
 @keyframes textGlow {
-    0%, 100% { filter: drop-shadow(0 0 5px var(--shadow-color)); }
-    50% { filter: drop-shadow(0 0 15px var(--accent-primary)); }
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1)); }
+    50% { filter: drop-shadow(0 0 15px rgba(33, 150, 243, 0.8)); }
 }
 
 .title {
     font-size: 16px;
-    color: var(--text-primary);
+    color: rgba(0, 0, 0, 0.87);
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -290,7 +262,7 @@ body::after {
 .description {
     font-size: 14px;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: rgba(0, 0, 0, 0.6);
     margin-bottom: 30px;
 }
 
@@ -305,28 +277,28 @@ body::after {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-primary);
+    color: rgba(0, 0, 0, 0.87);
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     cursor: none;
 }
 
 .social-link:hover {
     transform: translateY(-5px) scale(1.1);
-    background: var(--card-bg);
-    box-shadow: 0 10px 20px var(--shadow-color);
-    color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #2196F3;
 }
 
 .cta-button {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-dark));
+    background: linear-gradient(135deg, #2196F3, #0D47A1);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -335,7 +307,7 @@ body::after {
     font-weight: 600;
     cursor: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px var(--shadow-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -359,6 +331,6 @@ body::after {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px var(--shadow-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     filter: brightness(1.1);
 }
