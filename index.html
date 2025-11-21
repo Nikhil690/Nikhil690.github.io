@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Jangid • Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="Go to home">Nikhil Jangid</a>
+            <nav class="primary-nav" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+                    <span class="theme-icon" data-theme-icon>
+                        <!-- Icon injected via CSS -->
+                    </span>
+                    <span class="theme-label">Dark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Undergrad • Systems tinkerer</p>
+                    <h1>Curious student poking at low-level systems.</h1>
+                    <p class="lede">
+                        I'm specializing in systems programming and cybersecurity, with interests in Linux kernel engineering and network security.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button solid" href="#contact">Swap Knowledge</a>
+                        <a class="button ghost" href="mailto:jangidnj777@gmail.com">Just say Hi!</a>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-frame">
+                        <img src="resources/pf.png" alt="Portrait of Nikhil" loading="lazy">
+                    </div>
+                    <div class="status-pill">Open For Opportunities</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h2>Exploring kernels, networks, and attack surfaces through systems programming.</h2>
+                    <p>
+                        I’m currently an undergraduate computer science student with a deep interest in low-level systems and kernel engineering. While coursework provides the theoretical backbone, most of my real learning happens during long debugging sessions — tracing misbehaving packets, instrumenting code paths, and reverse-engineering subsystems that refuse to behave.<br><br>
+                        I actively experiment with Go, C, and Rust across networking and systems projects, and I document every non-obvious insight to make the learning path reproducible for my peers (and my future self). I pick up new stacks quickly, deploy unfamiliar systems with confidence, and enjoy reducing complex runtimes into something observable, debuggable, and deterministic.<br><br>
+                        
+                        My current focus lies at the intersection of systems engineering and cybersecurity — exploring kernel internals, attack surfaces, and observability through eBPF, while building a stronger foundation in OS, networking, and secure system design.
+                    </p>
+                </div>
+                <div class="about-cards">
+                    <article>
+                        <h3>Focus</h3>
+                        <ul>
+                            <li>eBPF observability</li>
+                            <li>Linux networking</li>
+                            <li>Efficient telemetry</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Current palette</h3>
+                        <p>Go • Rust • C • Research write-ups • eBPF • Linux</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Projects</h2>
+                    <p>I rotate between research labs and open-source rabbit holes, learning fast and sharing notes
+                        before the caffeine wears off.</p>
+                </div>
+                <div class="experience-list">
+                    <article>
+                        <div>
+                            <h3>eBPF Engineer</h3>
+                            <p class="meta">Ngkore Open Source · June 2025 — present</p>
+                        </div>
+                        <p>Helping the community prototype traffic-control ideas, benchmarking tools, and
+                            narrating the kernel edge cases I bump into.</p>
+                    </article>
+                    <article>
+                        <div>
+                            <h3>Research Engineer</h3>
+                            <p class="meta">Delhi University · Dec 2023 — present</p>
+                        </div>
+                        <p>Part student, part mentor—building tracing tools with my professors while trading theories
+                            with whoever wanders into the lab.</p>
+                    </article>
+                    <article>
+                        <div>
+                            <h3>R&D Engineer</h3>
+                            <p class="meta">CoRan Labs · Jan 2024 — May 2025</p>
+                        </div>
+                        <p>Worked on HEXA_UPF and HexaeBPF, mostly asking “why” until someone handed me a profiler,
+                            then documenting how we squeezed more packets through.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">Contact</p>
+
+                    <p>Currently exploring full-time or internship opportunities in systems, kernel engineering, or security-focused roles.
+I’m not doing client projects right now, but I’m always open to technical discussions, collaborations, and building things with the right people.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <span>Email</span>
+                            <a href="mailto:jangidnj777@gmail.com">jangidnj777@gmail.com</a>
+                        </li>
+                        <li>
+                            <span>Location</span>
+                            <p>New Delhi, India</p>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <label>
+                        Name
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="button solid">Send a hello</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Nikhil Jangid & AI Which helped me 😄</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
